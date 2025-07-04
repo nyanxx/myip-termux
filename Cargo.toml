@@ -1,0 +1,9 @@
+[package]
+name = "myip"
+version = "0.1.0"
+edition = "2024"
+description = "Termux native cli tool that shows ip address"
+license = "MIT"
+
+[dependencies]
+if-addrs = "0.13.4"
