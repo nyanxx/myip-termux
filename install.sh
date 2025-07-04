@@ -24,7 +24,6 @@ for cmd in curl tar; do
 	fi
 done
 
-
 # Map uname to expected arch tag
 case "$ARCH" in
 	aarch64)
@@ -40,12 +39,9 @@ case "$ARCH" in
 esac
 
 echo "📦 Downloading $BIN $TAG for $TARGET_ARCH..."
-
-
 URL="https://github.com/$REPO/releases/download/$TAG/${TAG}.tar.gz"
-
 curl -fsSL "$URL" -o "$TMPDIR/$BIN.tar.gz"
-file "$TMPDIR/$BIN.tar.gz"
+#file "$TMPDIR/$BIN.tar.gz"
 
 echo "📂 Extracting..."
 tar -xzf "$TMPDIR/$BIN.tar.gz" -C "$TMPDIR"
